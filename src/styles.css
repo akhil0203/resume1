@@ -1,0 +1,194 @@
+/**
+* CSS file to hold styles that apply across the application
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Montserrat:wght@200;400;600;800&display=swap");
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  padding: 0;
+  width: 100%;
+}
+
+div#main {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+section {
+  position: relative;
+  width: 100vw;
+}
+
+section.min-height {
+  min-height: 100vh;
+}
+
+section.padding {
+  padding: 5rem 0;
+}
+
+section img.background {
+  height: 100%;
+  left: 50%;
+  object-fit: cover;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, 0);
+  width: 100vmax;
+  z-index: -1;
+}
+
+h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: .8;
+  margin: 0;
+  white-space: nowrap;
+}
+/* Typing animation */
+/* The typing effect */
+@keyframes typing {
+  from { width: 0% }
+  to { width: 170% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+h1.typewriter {
+  width:170%;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 0.15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.05em; /* Adjust as needed */
+  animation: 
+    typing 1.0s steps(20, end),
+    blink-caret 0.75s step-end infinite;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0;
+  padding-top: 1rem;
+  white-space: nowrap;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 0;
+  font-weight: 300;
+}
+
+p.large {
+  font-size: 24px;
+}
+
+p.small {
+  font-size: 15px;
+}
+
+hr {
+  margin: 2.5rem;
+}
+
+li {
+  line-height: 1.7;
+}
+
+li::marker {
+  color: #4e567e;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4e567e;
+}
+
+.container {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 330px 300px;
+  margin: 20px auto;
+}
+
+.container .box {
+  border-radius: 10px;
+  border: 1px solid rgb(204, 204, 204);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 24px 16px;
+  text-align: center;
+}
+.boxhover {
+  transition: transform 0.3s ease-in-out; /* This makes the scale change animate smoothly */
+
+}
+.boxhover:hover {
+  transform: scale(1.05); /* This makes the box 5% larger when it's hovered over */
+}
+
+img.socialIcon {
+  height: 30px;
+  width: 30px;
+}
+@media screen and (max-width: 1024px) {
+  h1.typewriter {
+    font-size: 2rem; /* Adjust as needed */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Adjust as needed */
+  }
+
+  h3 {
+    font-size: 1.2rem; /* Adjust as needed */
+  }
+
+  p {
+    font-size: 16px; /* Adjust as needed */
+  }
+}
+
+/* Responsive styles for phone */
+@media screen and (max-width: 480px) {
+  h1.typewriter {
+    font-size: 1.5rem; /* Adjust as needed */
+  }
+
+  h2 {
+    font-size: 1.2rem; /* Adjust as needed */
+  }
+
+  h3 {
+    font-size: 1rem; /* Adjust as needed */
+  }
+
+  p {
+    font-size: 14px; /* Adjust as needed */
+  }
+}
